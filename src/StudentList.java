@@ -3,7 +3,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class StudentList {
-    private List<Student> students;
+    public List<Student> students = new ArrayList<>();
+
 
     public List<Student> getStudents() {
         return students;
@@ -47,6 +48,8 @@ public class StudentList {
                     res.add(this.students.get(i));
                     i++;
                 }
+                Collections.sort(res);
+                break;
             }
             else if(currentStudent.getScore() > targetScore){
                 low = mid + 1;

@@ -3,8 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numberOfStudents = sc.nextInt();
         StudentList studentList = new StudentList();
+        studentList.getStudents().clear();
+        int numberOfStudents = sc.nextInt();
+
+
         for(int i = 0; i < numberOfStudents; i++){
             Student s = new Student();
 
